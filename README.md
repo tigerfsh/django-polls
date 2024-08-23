@@ -17,3 +17,9 @@ To learn how to build and run the `polls` app container image, consult [How to B
 
 ### Test
  curl --resolve "hello.polls.com:80:$( minikube ip )" -i http://hello.polls.com
+
+### kubectl version
+
+Client Version: v1.31.0
+Kustomize Version: v5.4.2
+Server Version: v1.30.0
