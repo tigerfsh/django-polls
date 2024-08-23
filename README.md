@@ -15,4 +15,5 @@ This app is meant to be used as a reference Django app for several DigitalOcean 
 To learn how to build and run the `polls` app container image, consult [How to Build a Django and Gunicorn Application with Docker](https://www.digitalocean.com/community/tutorials/how-to-build-a-django-and-gunicorn-application-with-docker).
 
 
+### Test
  curl --resolve "hello.polls.com:80:$( minikube ip )" -i http://hello.polls.com
