@@ -1,0 +1,12 @@
+{
+  "apiVersion": "tanka.dev/v1alpha1",
+  "kind": "Environment",
+  "metadata": {
+    "name": "environments/prom-grafana/patched"
+  },
+  "spec": {
+    "namespace": "prom-grafana-patched",
+    "resourceDefaults": {},
+    "expectVersions": {}
+  }
+}

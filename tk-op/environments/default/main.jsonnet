@@ -34,6 +34,14 @@ local k = import 'github.com/grafana/jsonnet-libs/ksonnet-util/kausal.libsonnet'
         DATABASE_ENGINE: "postgresql_psycopg2",
     },
 
+    // object
+    _config:: {
+        polls_app: {
+            port: 5000,
+            name: "polls"
+        }
+    },
+
     polls_app: {
         configMap: configMap.new("polls-config") + configMap.withData($.myConfigData),
 
@@ -41,12 +49,12 @@ local k = import 'github.com/grafana/jsonnet-libs/ksonnet-util/kausal.libsonnet'
             name='polls',
             replicas=1,
             containers=[
-            container.new('polls', 'polls:latest')
-            + container.withPorts([port.new('api', 5000)])
+            container.new($._config.polls_app.name, 'polls:latest')
+            + container.withPorts([port.new('api', $._config.polls_app.port)])
             + container.withEnvFrom(envFrom.configMapRef.withName(self.configMap.metadata.name))
             ]
         ),
-        
+
         service: k.util.serviceFor(self.deployment),
 
         ingress: ingress.new("polls-ingress") 
