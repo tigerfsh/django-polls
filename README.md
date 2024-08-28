@@ -23,3 +23,17 @@ To learn how to build and run the `polls` app container image, consult [How to B
 Client Version: v1.31.0
 Kustomize Version: v5.4.2
 Server Version: v1.30.0
+
+
+### tk & jb 
+
+#### install tk & jb
+sudo curl -Lo /usr/local/bin/tk https://github.com/grafana/tanka/releases/latest/download/tk-linux-amd64
+sudo chmod a+x /usr/local/bin/tk
+
+sudo curl -Lo /usr/local/bin/jb https://github.com/jsonnet-bundler/jsonnet-bundler/releases/latest/download/jb-linux-amd64
+sudo chmod a+x /usr/local/bin/jb
+
+#### install k8s-libsonnet
+tk init
+jb install github.com/jsonnet-libs/k8s-libsonnet/1.21@main github.com/grafana/jsonnet-libs/ksonnet-util
