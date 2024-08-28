@@ -37,3 +37,8 @@ sudo chmod a+x /usr/local/bin/jb
 #### install k8s-libsonnet
 tk init
 jb install github.com/jsonnet-libs/k8s-libsonnet/1.21@main github.com/grafana/jsonnet-libs/ksonnet-util
+
+
+### Doc about Tanka
+https://tanka.dev/jsonnet/overview/
+
