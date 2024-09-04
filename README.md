@@ -42,3 +42,7 @@ jb install github.com/jsonnet-libs/k8s-libsonnet/1.21@main github.com/grafana/js
 ### Doc about Tanka
 https://tanka.dev/jsonnet/overview/
 
+
+### Create secret
+kubectl create secret generic polls-secret --from-env-file=polls-secrets
+
