@@ -5,7 +5,7 @@ metadata:
   labels:
     app: polls
 spec:
-  type: NodePort
+  # type: NodePort
   selector:
     app: polls
   ports:
